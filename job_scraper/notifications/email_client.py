@@ -3,10 +3,10 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# Recommendation: Store these in environment variables or a config file
-EMAIL_ADDRESS = os.environ.get("EMAIL_USERNAME", "joeljobbot@gmail.com")
-EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "drsa rbrx oiee jjas")
-RECEIVER_EMAIL = os.environ.get("EMAIL_RECIPIENT", "joeljobbot@gmail.com")
+# Load environment variables
+EMAIL_ADDRESS = os.environ.get("EMAIL_USERNAME", "")
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD", "")
+RECEIVER_EMAIL = os.environ.get("EMAIL_RECIPIENT", "")
 
 def send_email(subject, body):
     """

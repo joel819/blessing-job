@@ -1,9 +1,9 @@
 import os
 import requests
 
-# Recommendation: Store these in environment variables or a config file
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8536955372:AAGMyomvxsNK3s2EEm1oWOfFiwaFHjAC1S0")
-CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "686525754")
+# Load environment variables
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 def send_telegram(text):
     """

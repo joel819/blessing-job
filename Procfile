@@ -1,1 +1,1 @@
-worker: python job_scraper/main.py
+worker: playwright install chromium && python job_scraper/main.py
