@@ -7,15 +7,18 @@ EMAIL_ADDRESS = os.environ.get("EMAIL_USERNAME")
 EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 RECEIVER_EMAIL = os.environ.get("EMAIL_RECIPIENT", EMAIL_ADDRESS)
 
+
 def send_email(subject, body):
     if not EMAIL_ADDRESS or not EMAIL_PASSWORD:
         print("Email credentials not set. Skipping email.")
         return
+
     msg = MIMEMultipart()
     msg["From"] = EMAIL_ADDRESS
     msg["To"] = RECEIVER_EMAIL
     msg["Subject"] = subject
     msg.attach(MIMEText(body, "html"))
+
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()

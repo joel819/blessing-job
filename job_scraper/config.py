@@ -1,15 +1,22 @@
-# User Personal Details for Auto-Apply
-# IMPORTANT: Updated with user-provided details
+import os
 
 cv_path = "Blessing_Oyewole_Improved_CV_Updated.pdf"
 
 applicant = {
     "name": "Blessing Oyewole",
-    "email": "oyewoleblessing61@gmail.com",
+    "email": os.environ.get("APPLICANT_EMAIL", "oyewoleblessing61@gmail.com"),
     "phone": "07440350609"
 }
 
-# Keywords for skill matching (Legacy)
+LOCATION_KEYWORDS = []
+
+MIN_SALARY = 0
+
+MIN_QUALITY_SCORE = 3
+
+NOTIFICATION_MODE = "DAILY"
+DAILY_SUMMARY_TIME = "08:00"
+
 SKILL_MATCH_KEYWORDS = [
     "support worker", "healthcare assistant", "care assistant",
     "domiciliary", "care home", "senior carer",

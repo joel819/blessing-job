@@ -1,7 +1,6 @@
-__pycache__/
-*.log
-*.json
 .venv/
-.env
-application_log.csv
-Blessing_Oyewole_Improved_CV_Updated.pdf
+__pycache__/
+*.pyc
+jobs_cache.json
+daily_queue.json
+*.log
